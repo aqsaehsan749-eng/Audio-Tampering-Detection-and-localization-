@@ -1,4 +1,6 @@
-
+import streamlit as st
+st.title("Audio Tampering Detection")
+st.write("App Successfully deployed!")
 
 # ============================================================
 # IMPORTS
