@@ -1,6 +1,12 @@
 import streamlit as st
 st.title("Audio Tampering Detection")
 st.write("App Successfully deployed!")
+uploaded_file=st.file_uploader("choose an audio file",type=["wav,"mp3","mp4","m4a"])
+
+
+if uploaded_file is not None:
+     st.audio(uploaded_file)
+     st.write("file uploaded successfully!")
 
 # ============================================================
 # IMPORTS
