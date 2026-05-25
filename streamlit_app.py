@@ -31,9 +31,9 @@ if uploaded_file is not None:
         fig2, ax2 = plt.subplots(figsize=(10, 4))
         S = librosa.stft(y)
         S_db = librosa.amplitude_to_db(np.abs(S), ref=np.max)
-        librosa.display.specshow(S_db, sr=sr, x_axis='time', y_axis='log', ax=ax2)
+        img=librosa.display.specshow(S_db, sr=sr, x_axis='time', y_axis='log', ax=ax2)
         ax2.set(title="Spectrogram - Look for unnatural breaks")
-        plt.colorbar(format='%+2.0f dB', ax=ax2)
+        plt.colorbar(img,format='%+2.0f dB', ax=ax2)
         st.pyplot(fig2)
         
         # 3. Basic Tampering Check
